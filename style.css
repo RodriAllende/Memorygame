@@ -1,0 +1,73 @@
+body{
+    
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,107,0.3785889355742297) 18%, rgba(0,212,255,1) 91%);
+font: roboto-medium;
+color: wheat;
+
+}
+
+main{
+    width: 730px;;
+    margin: 100px auto;
+    display: flex;
+    align-items: center;
+}
+
+.section1{ 
+
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0 10px 10px 10px;
+    border-radius: 9px;
+}
+
+h1{
+    text-align: center;
+}
+
+button{
+
+    height: 100px;
+    width: 100px;
+        font-size: 40px;
+        color: black;
+        font-weight: bold;
+        
+}
+
+button:hover{
+
+    cursor: pointer;
+}
+
+.section2{
+
+    
+
+    background-color: rgba(255, 255, 255, 0.2);
+    font: roboto-medium;
+    font-size: 15px;
+    color: black;
+    border-top-right-radius:8px ;
+    border-bottom-right-radius: 8px ;
+    width: 250px;
+    height: 400px;
+   
+}
+
+
+
+.estadisticas{
+
+    border: solid 1px wheat;
+    height: 105px;
+    border-radius: 8px;
+    padding: 8px 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer{
+
+    text-align: center;
+}

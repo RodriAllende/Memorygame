@@ -11,13 +11,15 @@ main{
     margin: 100px auto;
     display: flex;
     align-items: center;
+   
 }
 
 .section1{ 
 
-    background-color: rgba(255, 255, 255, 0.2);
+
     padding: 0 10px 10px 10px;
     border-radius: 9px;
+    
 }
 
 h1{
@@ -28,9 +30,11 @@ button{
 
     height: 100px;
     width: 100px;
-        font-size: 40px;
-        color: black;
-        font-weight: bold;
+    color: black;
+    font-size: 40px;
+   
+     
+       
         
 }
 

@@ -17,7 +17,7 @@ main{
 .section1{ 
 
 
-    padding: 0 10px 10px 10px;
+  
     border-radius: 9px;
     
 }
@@ -74,4 +74,14 @@ button:hover{
 footer{
 
     text-align: center;
+}
+
+
+/* Estilo para los botones del juego */
+.game-button {
+    width: 100px; /* Cambia el valor según el tamaño que desees */
+    height: 100px; /* Cambia el valor según el tamaño que desees */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }

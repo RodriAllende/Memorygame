@@ -7,5 +7,6 @@
         "Segundos",
         "showhits",
         "showmoves"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }

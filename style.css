@@ -1,67 +1,74 @@
-body{
-    
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,107,0.3785889355742297) 18%, rgba(0,212,255,1) 91%);
-font: roboto-medium;
-color: wheat;
+body {
+    background-image: url(./images/Guitar\,\ acoustic\ guitar\,\ electric\ guitar\,\ guitar\ aesthetic\,\ guitar\ wallpaper\ hd\ wallpaper.jfif);
+  
+;
+
 
 }
 
-main{
-    width: 730px;;
-    margin: 100px auto;
+main {  
+    width: 730px;
+
+  margin-left: 40px;
+  margin-top: 200px;
     display: flex;
     align-items: center;
+    border: solid
+    3px pink;
    
+
+
 }
 
-.section1{ 
+.section1 {
 
 
-  
+    display: flex;
+    padding-top: 30px;
+    padding-right: 50px;
+    padding-left: 50px;
     border-radius: 9px;
-    
+
 }
 
-h1{
-    text-align: center;
-}
 
-button{
+
+button {
 
     height: 100px;
     width: 100px;
-    color: black;
     font-size: 40px;
-   
-     
-       
-        
+
+
+
+
 }
 
-button:hover{
+button:hover {
 
     cursor: pointer;
 }
 
-.section2{
+.section2 {
 
-    
 
+    font-family: 'Lato', sans-serif;
+    font-family: 'New Rocker', cursive;
     background-color: rgba(255, 255, 255, 0.2);
-    font: roboto-medium;
-    font-size: 15px;
-    color: black;
-    border-top-right-radius:8px ;
-    border-bottom-right-radius: 8px ;
+   font-size: 15px;
+    color: aliceblue;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
     width: 250px;
     height: 400px;
-   
+
 }
 
 
 
-.estadisticas{
-
+.estadisticas {
+    font-family: 'Lato', sans-serif;
+    font-family: 'New Rocker', cursive;
     border: solid 2px wheat;
     height: 105px;
     border-radius: 8px;
@@ -70,8 +77,10 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+    color: aliceblue;
 }
-footer{
+
+footer {
 
     text-align: center;
 }
@@ -79,9 +88,28 @@ footer{
 
 /* Estilo para los botones del juego */
 .game-button {
-    width: 100px; /* Cambia el valor según el tamaño que desees */
-    height: 100px; /* Cambia el valor según el tamaño que desees */
+    width: 100px;
+    /* Cambia el valor según el tamaño que desees */
+    height: 100px;
+    /* Cambia el valor según el tamaño que desees */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+header {
+    display: flex;
+   justify-content: center;
+    font-family: 'Lato', sans-serif;
+    font-family: 'New Rocker', cursive;
+    font-size: xx-large;
+    color: aliceblue;
+    background-color: black;
+    padding-top: 0px;
+    margin-bottom: 100px;
+    position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	-webkit-margin: 0;
 }

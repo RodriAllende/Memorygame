@@ -8,71 +8,100 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=New+Rocker&display=swap" rel="stylesheet">
+
+
     <title>Memory Game</title>
 </head>
 <header>
-        <h1>Memory Game for Rockstar like you !</h1>
-
+    <h1>Memory Game for Rockstar like you !</h1>
 </header>
 
 
 <body>
-     <main>
 
-<section class="section1">
-
-<table>
-
- <tr>
-                    <td><button id="0" class="game-button" onclick="Show(0)"></button></td>
-                    <td><button id="1" class="game-button" onclick="Show(1)"></button></td>
-                    <td><button id="2" class="game-button" onclick="Show(2)"></button></td>
-                    <td><button id="3" class="game-button" onclick="Show(3)"></button></td>
-                </tr>
-                <tr>
-                    <td><button id="4" class="game-button" onclick="Show(4)"></button></td>
-                    <td><button id="5" class="game-button" onclick="Show(5)"></button></td>
-                    <td><button id="6" class="game-button" onclick="Show(6)"></button></td>
-                    <td><button id="7" class="game-button" onclick="Show(7)"></button></td>
-                </tr>
-
-                <tr>
-                    <td><button id="8" class="game-button" onclick="Show(8)"></button></td>
-                    <td><button id="9" class="game-button" onclick="Show(9)"></button></td>
-                    <td><button id="10" class="game-button" onclick="Show(10)"></button></td>
-                    <td><button id="11" class="game-button" onclick="Show(11)"></button></td>
-                </tr>
-
-                <tr>
-                    <td><button id="12" onclick="Show(12)"></button></td>
-                    <td><button id="13" onclick="Show(13)"></button></td>
-                    <td><button id="14" onclick="Show(14)"></button></td>
-                    <td><button id="15" onclick="Show(15)"></button></td>
-                </tr>
-
-
-            </table>
-        </section>
-        <section class="section2">
+  
 
 
 
-            <h2 id="hits" class="estadisticas">Hits:0</h2>
-            <h2 id="remaining" class="estadisticas">Time:30 Segundos</h2>
-            <h2 id="moves" class="estadisticas">Moves:0</h2>
 
-</section>
 
-</main>
+
+
+
+
+
+
+
+
+    <div class="fondorock">
+
+
+        <main>
+
+            <section class="section1">
+
+                <table>
+
+                    <tr>
+                        <td><button id="0" class="game-button" onclick="Show(0)"></button></td>
+                        <td><button id="1" class="game-button" onclick="Show(1)"></button></td>
+                        <td><button id="2" class="game-button" onclick="Show(2)"></button></td>
+                        <td><button id="3" class="game-button" onclick="Show(3)"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="4" class="game-button" onclick="Show(4)"></button></td>
+                        <td><button id="5" class="game-button" onclick="Show(5)"></button></td>
+                        <td><button id="6" class="game-button" onclick="Show(6)"></button></td>
+                        <td><button id="7" class="game-button" onclick="Show(7)"></button></td>
+                    </tr>
+
+                    <tr>
+                        <td><button id="8" class="game-button" onclick="Show(8)"></button></td>
+                        <td><button id="9" class="game-button" onclick="Show(9)"></button></td>
+                        <td><button id="10" class="game-button" onclick="Show(10)"></button></td>
+                        <td><button id="11" class="game-button" onclick="Show(11)"></button></td>
+                    </tr>
+
+                    <tr>
+                        <td><button id="12" class="game-button" onclick="Show(12)"></button></td>
+                        <td><button id="13" class="game-button" onclick="Show(13)"></button></td>
+                        <td><button id="14" class="game-button" onclick="Show(14)"></button></td>
+                        <td><button id="15" class="game-button" onclick="Show(15)"></button></td>
+                    </tr>
+
+
+                </table>
+            </section>
+            <section class="section2">
+
+
+
+                <h2 id="hits" class="estadisticas">Hits:0</h2>
+                <h2 id="remaining" class="estadisticas">Time:30 Segundos</h2>
+                <h2 id="moves" class="estadisticas">Moves:0</h2>
+<h2><button id="reset-button" class="game-button" onclick="resetGame()">Reset</button></h2>
+
+    
+
+             
+
+
+            </section>
+
+        </main>
+
+
+    </div>
+
 </body>
 
 <footer>
 
-        <h3>Juego programado por Rodrigo Allende 2023</h3>
-    </footer>
+    <h3>Juego programado por Rodrigo Allende 2023</h3>
+</footer>
 
 
 
-    <script src="main.js"></script>
+<script src="main.js"></script>
 
 </html>

@@ -1,10 +1,15 @@
 main {
+   
     width: 730px;
-    margin-left: 40px;
+    margin-left:300px;
     margin-top: 200px;
     display: flex;
     align-items: center;
     border: solid 3px pink;
+    max-width: 100%; /* La imagen no será más ancha que el contenedor */
+    height: auto;
+    background-size: contain;
+
 }
 
 .section1 {
@@ -38,6 +43,9 @@ button:hover {
     border-bottom-right-radius: 8px;
     width: 250px;
     height: 400px;
+    margin-right: 20px;
+    text-align: center;
+ 
 
 }
 
@@ -53,6 +61,7 @@ button:hover {
     align-items: center;
     justify-content: center;
     color: aliceblue;
+    background-color: black;
 }
 
 footer {
@@ -64,10 +73,16 @@ footer {
 .game-button {
     width: 100px;
     height: 100px;
-     background-size: cover;
+    background-size: 100% 100%; /* Esto ajustará la imagen de fondo */
     background-repeat: no-repeat;
     background-position: center center;
+    
+    border: solid 2px pink;  
+  
+
 }
+
+
 
 header {
     display: flex;
@@ -83,9 +98,37 @@ header {
     left: 0;
     right: 0;
     top: 0;
-    -webkit-margin: 0;
+}
+ footer{
+    background-color: black;
+    color: aliceblue;
+    font-family: "New Rocker", cursive;
+ }
+div.fondorock{
+    background-color: blue;
 }
 
-body{
-    background-image: url(./images/descarga.jfif);
+#reset-button {
+    font-family: 'Lato', sans-serif;
+    font-family: 'New Rocker', cursive;
+    border: solid 2px wheat;
+    height: 105px;
+    border-radius: 8px;
+    padding: 8px 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    background-color: black;
+}
+ 
+    }
+    
+
+
+#reset-button:hover {
+    cursor: pointer;
+    background-color: #ff9466; /* Color de fondo al pasar el mouse sobre el botón */
+    border: 2px solid #ff9466; /* Borde al pasar el mouse sobre el botón */
 }

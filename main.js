@@ -1,3 +1,4 @@
+
 let showcard = 0;
 let card1 = null;
 let card2 = null;
@@ -27,7 +28,9 @@ function countdown() {
 }
 
 function getImageUrl(id) {
-    return `url('images/${id}.jfif')`;
+    const imageUrl = `images/${id}.jfif`;
+    console.log('URL de la imagen:', imageUrl);
+    return `url('${imageUrl}')`;
 }
 
 function Show(id) {
@@ -48,7 +51,7 @@ function Show(id) {
         card1 = card;
         firstResults = numbers[id];
         card1.style.backgroundImage = getImageUrl(firstResults);
-        card1.style.backgroundSize = '82%';
+        card1.style.backgroundSize = '100%';
         card1.disabled = true;
     } else if (showcard === 1) {
         // Segundo clic
@@ -56,7 +59,7 @@ function Show(id) {
         card2 = card;
         secondResults = numbers[id];
         card2.style.backgroundImage = getImageUrl(secondResults);
-        card2.style.backgroundSize = '82%';
+        card2.style.backgroundSize = '100%';
         card2.disabled = true;
 
         moves++;
@@ -83,4 +86,33 @@ function Show(id) {
             }, 1000); // Cambié el tiempo de espera a 1000ms (1 segundo) para que se muestren las cartas incorrectas durante menos tiempo.
         }
     }
+}
+
+function resetGame() {
+    // Restablecer todas las variables y estadísticas del juego aquí
+    showcard = 0;
+    card1 = null;
+    card2 = null;
+    firstResults = null;
+    secondResults = null;
+    moves = 0;
+    hits = 0;
+    timer = 30;
+
+    // Restablecer la visualización de estadísticas en el HTML
+    showMoves.innerHTML = 'Moves: 0';
+    showhits.innerHTML = 'Hits: 0';
+    showtime.innerHTML = 'Remaining Time: 30';
+
+    // Restablecer las imágenes de las cartas y habilitar los botones
+    for (let i = 0; i < 16; i++) {
+        const card = document.getElementById(i);
+        card.style.backgroundImage = '';
+        card.disabled = false;
+    }
+
+    // Detener el temporizador actual (si está en marcha)
+    clearInterval(timerInterval);
+
+    // Iniciar un nuevo juego o realizar cualquier otra acción necesaria aquí
 }

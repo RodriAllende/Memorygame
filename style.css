@@ -1,15 +1,15 @@
 main {
-   
+
     width: 730px;
-    margin-left:300px;
+    margin-left: 300px;
     margin-top: 200px;
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
     border: solid 3px pink;
-    max-width: 100%; /* La imagen no será más ancha que el contenedor */
-    height: auto;
-    background-size: contain;
-
+       
+   
 }
 
 .section1 {
@@ -18,6 +18,7 @@ main {
     padding-right: 50px;
     padding-left: 50px;
     border-radius: 9px;
+    gap: 300px;
 
 }
 
@@ -25,7 +26,9 @@ button {
 
     height: 100px;
     width: 100px;
-    font-size: 40px;}
+    font-size: 40px;
+   
+}
 
 button:hover {
 
@@ -36,36 +39,68 @@ button:hover {
 
     font-family: 'Lato', sans-serif;
     font-family: 'New Rocker', cursive;
-    background-color: rgba(255, 255, 255, 0.2);
     font-size: 15px;
     color: aliceblue;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-    width: 250px;
-    height: 400px;
-    margin-right: 20px;
     text-align: center;
- 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
 
+
+}
+
+
+.estadisticas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .estadisticas {
     font-family: 'Lato', sans-serif;
     font-family: 'New Rocker', cursive;
+    font-size:xx-large;
     border: solid 2px wheat;
-    height: 105px;
-    border-radius: 8px;
-    padding: 8px 20px;
+  border-radius: 8px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
     color: aliceblue;
     background-color: black;
+    height: 100px;
+    width: 150px;
+
 }
 
+/* Estilo específico para el botón de reinicio */
+#reset-button {
+    font-family: 'Lato', sans-serif;
+    font-family: 'New Rocker', cursive;
+    font-size:xx-large;
+    border: solid 2px wheat;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    background-color: black;
+    height: 100px;
+    width: 150px;
+    cursor: pointer;
+}
+
+#reset-button:hover {
+    background-color: darkred;
+}
+
+
 footer {
- text-align: center;
+    text-align: center;
 }
 
 
@@ -73,12 +108,11 @@ footer {
 .game-button {
     width: 100px;
     height: 100px;
-    background-size: 100% 100%; /* Esto ajustará la imagen de fondo */
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
-    
-    border: solid 2px pink;  
-  
+    border: solid 2px pink;
+   margin: 4px;
 
 }
 
@@ -99,36 +133,25 @@ header {
     right: 0;
     top: 0;
 }
- footer{
+
+footer {
     background-color: black;
     color: aliceblue;
     font-family: "New Rocker", cursive;
- }
-div.fondorock{
+}
+
+div.fondorock {
     background-color: blue;
 }
 
-#reset-button {
+div.modal{
+    
     font-family: 'Lato', sans-serif;
     font-family: 'New Rocker', cursive;
+    font-size:large;
     border: solid 2px wheat;
-    height: 105px;
     border-radius: 8px;
-    padding: 8px 20px;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: aliceblue;
-    background-color: black;
-}
- 
-    }
-    
-
-
-#reset-button:hover {
     cursor: pointer;
-    background-color: #ff9466; /* Color de fondo al pasar el mouse sobre el botón */
-    border: 2px solid #ff9466; /* Borde al pasar el mouse sobre el botón */
+    padding-left: 500px;
 }
+  

@@ -116,3 +116,24 @@ function resetGame() {
 
     // Iniciar un nuevo juego o realizar cualquier otra acción necesaria aquí
 }
+
+
+
+function countdown() {
+    timerInterval = setInterval(() => {
+        timer--;
+        showtime.innerHTML = `Remaining Time: ${timer}`;
+        if (timer === 0) {
+            clearInterval(timerInterval);
+            showGameFinishedMessage(); // Llama a la función cuando el temporizador llega a cero
+        }
+    }, 1000);
+}
+
+
+function showGameFinishedMessage() {
+    const scoreMessage = `Tu puntaje fue: ${hits}`;
+    const message = `Juego finalizado. ${scoreMessage} Presiona el botón Reset para comenzar de nuevo.`;
+    alert(message);
+}
+

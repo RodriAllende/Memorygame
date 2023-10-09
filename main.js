@@ -1,4 +1,3 @@
-
 let showcard = 0;
 let card1 = null;
 let card2 = null;
@@ -98,6 +97,7 @@ function resetGame() {
     moves = 0;
     hits = 0;
     timer = 30;
+    temp = false; // Restablece la variable temp a false
 
     // Restablecer la visualización de estadísticas en el HTML
     showMoves.innerHTML = 'Moves: 0';
@@ -116,20 +116,6 @@ function resetGame() {
 
     // Iniciar un nuevo juego o realizar cualquier otra acción necesaria aquí
 }
-
-
-
-function countdown() {
-    timerInterval = setInterval(() => {
-        timer--;
-        showtime.innerHTML = `Remaining Time: ${timer}`;
-        if (timer === 0) {
-            clearInterval(timerInterval);
-            showGameFinishedMessage(); // Llama a la función cuando el temporizador llega a cero
-        }
-    }, 1000);
-}
-
 
 function showGameFinishedMessage() {
     const scoreMessage = `Tu puntaje fue: ${hits}`;

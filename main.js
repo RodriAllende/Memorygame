@@ -1,3 +1,6 @@
+
+
+
 let showcard = 0;
 let card1 = null;
 let card2 = null;
@@ -10,8 +13,7 @@ let showhits = document.getElementById('hits');
 let showtime = document.getElementById('remaining');
 let temp = false;
 let timer = 30;
-let timerInterval; // Variable para guardar el identificador del intervalo del temporizador
-
+let timerInterval;
 let numbers = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
 numbers = numbers.sort(() => Math.random() - 0.5);
 
@@ -21,7 +23,8 @@ function countdown() {
         showtime.innerHTML = `Remaining Time: ${timer}`;
         if (timer === 0) {
             clearInterval(timerInterval);
-            // Agregar aquí cualquier acción que quieras realizar al agotarse el tiempo
+            lockCards();
+            displayMessage(); 
         }
     }, 1000);
 }
@@ -39,7 +42,7 @@ function Show(id) {
     }
 
     if (showcard === 2) {
-        return; // Evitar que se muestren más de 2 cartas
+        return; 
     }
 
     const card = document.getElementById(id);
@@ -65,7 +68,7 @@ function Show(id) {
         showMoves.innerHTML = `Moves: ${moves}`;
 
         if (firstResults === secondResults) {
-            // Las cartas coinciden
+          
             showcard = 0;
             hits++;
             showhits.innerHTML = `Hits: ${hits}`;
@@ -73,6 +76,8 @@ function Show(id) {
             if (hits === 8) {
                 showhits.innerHTML = `Hits: ${hits} 😊`;
                 showMoves.innerHTML = `Moves: ${moves} 🙌`;
+                resetGame();
+                displayMessage(); 
             }
         } else {
             // Las cartas no coinciden
@@ -82,13 +87,20 @@ function Show(id) {
                 card1.disabled = false;
                 card2.disabled = false;
                 showcard = 0;
-            }, 1000); // Cambié el tiempo de espera a 1000ms (1 segundo) para que se muestren las cartas incorrectas durante menos tiempo.
+            }, 1000);
         }
     }
 }
 
+function lockCards() {
+    for (let i = 0; i < 16; i++) {
+        const card = document.getElementById(i);
+        card.disabled = true;
+    }
+}
+
 function resetGame() {
-    // Restablecer todas las variables y estadísticas del juego aquí
+    
     showcard = 0;
     card1 = null;
     card2 = null;
@@ -97,30 +109,32 @@ function resetGame() {
     moves = 0;
     hits = 0;
     timer = 30;
-    temp = false; // Restablece la variable temp a false
+    temp = false; 
 
-    // Restablecer la visualización de estadísticas en el HTML
+   
     showMoves.innerHTML = 'Moves: 0';
     showhits.innerHTML = 'Hits: 0';
     showtime.innerHTML = 'Remaining Time: 30';
 
-    // Restablecer las imágenes de las cartas y habilitar los botones
+    
     for (let i = 0; i < 16; i++) {
         const card = document.getElementById(i);
         card.style.backgroundImage = '';
-        card.disabled = false;
+        card.disabled = false; // Habilita las cartas nuevamente
     }
 
-    // Detener el temporizador actual (si está en marcha)
+    
     clearInterval(timerInterval);
-
-    // Iniciar un nuevo juego o realizar cualquier otra acción necesaria aquí
 }
 
-function showGameFinishedMessage() {
-    const scoreMessage = `Tu puntaje fue: ${hits}`;
-    const message = `Juego finalizado. ${scoreMessage} Presiona el botón Reset para comenzar de nuevo.`;
-    alert(message);
+function displayMessage() {
+    let scoreMessage = '';
+    if (hits >= 0 && hits <= 3) {
+        scoreMessage = `Necesitas mejorar tu memoria. Tu puntaje fue de ${hits} aciertos en ${moves} movimientos.`;
+    } else if (hits >= 4 && hits <= 7) {
+        scoreMessage = `Excelente memoria. Tu puntaje fue de ${hits} aciertos en ${moves} movimientos.`;
+    } else if (hits === 8) {
+        scoreMessage = `¡Felicitaciones! Eres todo un Rock Star. Tu puntaje fue de ${hits} aciertos en ${moves} movimientos.`;
+    }
+    alert(scoreMessage);
 }
-
-

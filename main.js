@@ -1,6 +1,3 @@
-
-
-
 let showcard = 0;
 let card1 = null;
 let card2 = null;
@@ -17,6 +14,11 @@ let timerInterval;
 let numbers = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
 numbers = numbers.sort(() => Math.random() - 0.5);
 
+// Reproduce la música de fondo automáticamente al cargar la página
+const bgMusic = document.getElementById('bgMusic');
+bgMusic.autoplay = true;
+bgMusic.load();
+
 function countdown() {
     timerInterval = setInterval(() => {
         timer--;
@@ -24,7 +26,7 @@ function countdown() {
         if (timer === 0) {
             clearInterval(timerInterval);
             lockCards();
-            displayMessage(); 
+            displayMessage();
         }
     }, 1000);
 }
@@ -42,7 +44,7 @@ function Show(id) {
     }
 
     if (showcard === 2) {
-        return; 
+        return;
     }
 
     const card = document.getElementById(id);
@@ -68,7 +70,7 @@ function Show(id) {
         showMoves.innerHTML = `Moves: ${moves}`;
 
         if (firstResults === secondResults) {
-          
+
             showcard = 0;
             hits++;
             showhits.innerHTML = `Hits: ${hits}`;
@@ -77,7 +79,7 @@ function Show(id) {
                 showhits.innerHTML = `Hits: ${hits} 😊`;
                 showMoves.innerHTML = `Moves: ${moves} 🙌`;
                 resetGame();
-                displayMessage(); 
+                displayMessage();
             }
         } else {
             // Las cartas no coinciden
@@ -100,7 +102,7 @@ function lockCards() {
 }
 
 function resetGame() {
-    
+
     showcard = 0;
     card1 = null;
     card2 = null;
@@ -109,21 +111,18 @@ function resetGame() {
     moves = 0;
     hits = 0;
     timer = 30;
-    temp = false; 
+    temp = false;
 
-   
     showMoves.innerHTML = 'Moves: 0';
     showhits.innerHTML = 'Hits: 0';
     showtime.innerHTML = 'Remaining Time: 30';
 
-    
     for (let i = 0; i < 16; i++) {
         const card = document.getElementById(i);
         card.style.backgroundImage = '';
         card.disabled = false; // Habilita las cartas nuevamente
     }
 
-    
     clearInterval(timerInterval);
 }
 
@@ -138,3 +137,15 @@ function displayMessage() {
     }
     alert(scoreMessage);
 }
+
+
+// Inicia la reproducción de la música
+const audio = document.querySelector("audio");
+audio.play();
+
+// Pausa la reproducción de la música
+audio.pause();
+
+// Detiene la reproducción de la música
+audio.stop();
+

@@ -18,7 +18,7 @@ main {
     padding-right: 50px;
     padding-left: 50px;
     border-radius: 9px;
-    margin-top: -280px;
+    margin-top: -360px;
     margin-left: 50px;
     gap: 300px;
 
@@ -50,7 +50,7 @@ button:hover {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    margin-top: -300px;
+    margin-top: -370px;
 
 
 }
@@ -115,8 +115,10 @@ footer {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
-   
-   margin: 4px;
+    margin: 4px;
+    background-color: transparent;
+    border: solid 10px white;
+    border-radius: 8px;
 
 }
 
@@ -130,9 +132,10 @@ header {
     font-size: xx-large;
     color: aliceblue;
     background-color: black;
-    padding-top: -100px;
+    padding-top: -800px;
     margin-top: -40px;
    margin-bottom: -200px;
+   padding-bottom: -1800px;
     
 }
 
@@ -141,8 +144,8 @@ div.desarrollador {
     color: aliceblue;
     font-family: "New Rocker", cursive;
     background-color: black;
-    margin-top: -20px;
-    margin-left: 430px;
+    margin-top: -25px;
+    margin-left: 450px;
     margin-right: 550px;
     }
    

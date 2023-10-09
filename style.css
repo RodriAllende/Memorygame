@@ -143,10 +143,12 @@ div.desarrollador {
    
     color: aliceblue;
     font-family: "New Rocker", cursive;
-    background-color: black;
+    background-color:transparent;
     margin-top: -25px;
     margin-left: 450px;
-    margin-right: 550px;
+    margin-right: 450px;
+    
+    
     }
    
   

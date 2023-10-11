@@ -14,19 +14,16 @@ let timerInterval;
 let numbers = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
 numbers = numbers.sort(() => Math.random() - 0.5);
 
-// Reproduce la música de fondo automáticamente al cargar la página
-const bgMusic = document.getElementById('bgMusic');
-bgMusic.autoplay = true;
-bgMusic.load();
-
 function countdown() {
     timerInterval = setInterval(() => {
         timer--;
         showtime.innerHTML = `Remaining Time: ${timer}`;
         if (timer === 0) {
-            clearInterval(timerInterval);
+            clearInterval(timerInterval); // Detener el intervalo cuando el temporizador llega a cero
             lockCards();
-            displayMessage();
+            setTimeout(() => {
+                displayMessage();
+            }, 1000);
         }
     }, 1000);
 }
@@ -70,16 +67,13 @@ function Show(id) {
         showMoves.innerHTML = `Moves: ${moves}`;
 
         if (firstResults === secondResults) {
-
             showcard = 0;
             hits++;
             showhits.innerHTML = `Hits: ${hits}`;
-
             if (hits === 8) {
                 showhits.innerHTML = `Hits: ${hits} 😊`;
                 showMoves.innerHTML = `Moves: ${moves} 🙌`;
-                resetGame();
-                displayMessage();
+                startGame();
             }
         } else {
             // Las cartas no coinciden
@@ -101,8 +95,9 @@ function lockCards() {
     }
 }
 
-function resetGame() {
-
+function startGame() {
+    var audio = document.getElementById("audio");
+    audio.play();
     showcard = 0;
     card1 = null;
     card2 = null;
@@ -126,6 +121,12 @@ function resetGame() {
     clearInterval(timerInterval);
 }
 
+function stopmusic() {
+    var audio = document.getElementById("audio");
+    audio.pause();
+    audio.currentTime = 0;
+}
+
 function displayMessage() {
     let scoreMessage = '';
     if (hits >= 0 && hits <= 3) {
@@ -136,16 +137,5 @@ function displayMessage() {
         scoreMessage = `¡Felicitaciones! Eres todo un Rock Star. Tu puntaje fue de ${hits} aciertos en ${moves} movimientos.`;
     }
     alert(scoreMessage);
+    stopmusic();
 }
-
-
-// Inicia la reproducción de la música
-const audio = document.querySelector("audio");
-audio.play();
-
-// Pausa la reproducción de la música
-audio.pause();
-
-// Detiene la reproducción de la música
-audio.stop();
-

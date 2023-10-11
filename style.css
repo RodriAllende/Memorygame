@@ -14,11 +14,11 @@ main {
 
 .section1 {
     display: flex;
-    padding-top: -200px;
+    padding-top: 100px;
     padding-right: 50px;
     padding-left: 50px;
     border-radius: 9px;
-    margin-top: -360px;
+    margin-top: -385px;
     margin-left: 50px;
     gap: 300px;
 
@@ -50,7 +50,7 @@ button:hover {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    margin-top: -370px;
+    margin-top: -300px;
 
 
 }
@@ -79,8 +79,8 @@ button:hover {
 
 }
 
-/* Estilo específico para el botón de reinicio */
-#reset-button {
+
+#start-button {
     font-family: 'Lato', sans-serif;
     font-family: 'New Rocker', cursive;
     font-size:xx-large;
@@ -98,7 +98,7 @@ button:hover {
     margin-top: 200px;
 }
 
-#reset-button:hover {
+#start-button:hover {
     background-color: darkred;
 }
 
@@ -144,7 +144,7 @@ div.desarrollador {
     color: aliceblue;
     font-family: "New Rocker", cursive;
     background-color:transparent;
-    margin-top: -25px;
+    margin-top: -15px;
     margin-left: 450px;
     margin-right: 450px;
     
@@ -168,12 +168,12 @@ div.modal{
 }
   
     body {
-        margin: 0; /* Elimina el margen */
-        padding: 0; /* Elimina el relleno */
+        margin: 0; 
+        padding: 0; 
         background-image: url(./images/desktop-1920x1080.jpg);
-        background-size: cover; /* Cubre toda la pantalla sin distorsionar la imagen */
-        background-repeat: no-repeat; /* Evita que la imagen se repita */
-        background-attachment: fixed; /* Fija la imagen de fondo para que no se desplace con el contenido */
-        background-position: center; /* Centra la imagen de fondo */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed; 
+        background-position: center; 
     }
    

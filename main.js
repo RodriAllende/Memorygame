@@ -19,7 +19,7 @@ function countdown() {
         timer--;
         showtime.innerHTML = `Remaining Time: ${timer}`;
         if (timer === 0) {
-            clearInterval(timerInterval); // Detener el intervalo cuando el temporizador llega a cero
+            clearInterval(timerInterval); 
             lockCards();
             setTimeout(() => {
                 displayMessage();
@@ -47,7 +47,7 @@ function Show(id) {
     const card = document.getElementById(id);
 
     if (showcard === 0) {
-        // Primer clic
+      
         showcard = 1;
         card1 = card;
         firstResults = numbers[id];
@@ -55,7 +55,7 @@ function Show(id) {
         card1.style.backgroundSize = '100%';
         card1.disabled = true;
     } else if (showcard === 1) {
-        // Segundo clic
+        
         showcard = 2;
         card2 = card;
         secondResults = numbers[id];
@@ -76,7 +76,7 @@ function Show(id) {
                 startGame();
             }
         } else {
-            // Las cartas no coinciden
+           
             setTimeout(() => {
                 card1.style.backgroundImage = '';
                 card2.style.backgroundImage = '';
@@ -115,7 +115,7 @@ function startGame() {
     for (let i = 0; i < 16; i++) {
         const card = document.getElementById(i);
         card.style.backgroundImage = '';
-        card.disabled = false; // Habilita las cartas nuevamente
+        card.disabled = false;
     }
 
     clearInterval(timerInterval);

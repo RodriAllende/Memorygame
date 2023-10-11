@@ -8,8 +8,8 @@ main {
     justify-content: flex-start;
     align-items: flex-start;
 
-       
-   
+
+
 }
 
 .section1 {
@@ -25,15 +25,13 @@ main {
 }
 
 button {
-
     height: 100px;
     width: 100px;
     font-size: 40px;
-   
+
 }
 
 button:hover {
-
     cursor: pointer;
 }
 
@@ -51,10 +49,7 @@ button:hover {
     justify-content: flex-end;
     align-items: flex-end;
     margin-top: -300px;
-
-
 }
-
 
 .estadisticas-container {
     display: flex;
@@ -65,9 +60,9 @@ button:hover {
 .estadisticas {
     font-family: 'Lato', sans-serif;
     font-family: 'New Rocker', cursive;
-    font-size:xx-large;
+    font-size: xx-large;
     border: solid 10px white;
-  border-radius: 8px;
+    border-radius: 8px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -83,7 +78,7 @@ button:hover {
 #start-button {
     font-family: 'Lato', sans-serif;
     font-family: 'New Rocker', cursive;
-    font-size:xx-large;
+    font-size: xx-large;
     border: solid 10px white;
     border-radius: 8px;
     box-sizing: border-box;
@@ -134,46 +129,41 @@ header {
     background-color: black;
     padding-top: -800px;
     margin-top: -40px;
-   margin-bottom: -200px;
-   padding-bottom: -1800px;
-    
+    margin-bottom: -200px;
+    padding-bottom: -1800px;
+
 }
 
 div.desarrollador {
-   
+
     color: aliceblue;
     font-family: "New Rocker", cursive;
-    background-color:transparent;
+    background-color: transparent;
     margin-top: -15px;
     margin-left: 450px;
     margin-right: 450px;
-    
-    
-    }
-   
-  
 
 
+}
 
-div.modal{
-    
+div.modal {
+
     font-family: 'Lato', sans-serif;
     font-family: 'New Rocker', cursive;
-    font-size:large;
+    font-size: large;
     color: white;
     border-radius: 8px;
     cursor: pointer;
     padding-left: 500px;
-    
+
 }
-  
-    body {
-        margin: 0; 
-        padding: 0; 
-        background-image: url(./images/desktop-1920x1080.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed; 
-        background-position: center; 
-    }
-   
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(./images/desktop-1920x1080.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
